@@ -20,19 +20,13 @@
 
 const categories = document.querySelectorAll('.item');
 
-function getNumberOfCategories(categories) {
-  return categories.length;
-}
-
-console.log('Number of categories:', getNumberOfCategories(categories));
-
-// console.log(categories);
+console.log('Number of categories:', categories.length);
 
 const item = [...categories];
-// console.log(item);
+
 item.forEach((item, index) => {
   const category = item.querySelector('h2');
-  const elements = item.querySelectorAll('ul li').length;
+  const elements = item.querySelectorAll('li').length;
 
   console.log('\nCategory:', category.textContent);
   console.log('Elements:', elements);
