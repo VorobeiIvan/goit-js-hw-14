@@ -21,16 +21,14 @@ const increment = document.querySelector('[data-action="increment"]');
 
 let counterValue = 0;
 
-decrement.addEventListener('click', function () {
-  if (counterValue > 0) {
-    counterValue -= 1;
-    return (value.textContent = counterValue);
-  } else {
-    return counterValue;
-  }
-});
+decrement.addEventListener('click', decrementFunction);
+function decrementFunction() {
+  counterValue -= 1;
+  value.textContent = counterValue;
+}
 
-increment.addEventListener('click', function () {
+increment.addEventListener('click', incrementFunction);
+function incrementFunction() {
   counterValue += 1;
   value.textContent = counterValue;
-});
+}
