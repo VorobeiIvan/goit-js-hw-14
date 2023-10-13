@@ -18,11 +18,12 @@
 // Category: Technologies
 // Elements: 5
 
-const categories = document.querySelectorAll('.item');
+const categories = document.querySelector('#categories');
+const children = categories.children;
 
-console.log('Number of categories:', categories.length);
+console.log('Number of categories:', children.length);
 
-const item = [...categories];
+const item = [...children];
 
 item.forEach((item, index) => {
   const category = item.querySelector('h2');
